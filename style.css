@@ -1,62 +1,73 @@
-*{
-    margin:0;
+* {
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-body{
-    background-color:#548687;
-    text-align:center;
 
-}
-.container{
-   height:70vh;
-   display:flex;
-   justify-content: center;
-    align-items: center;
-
-}
-.game{
-    height:60vmin;
-    width:60vmin;
-    display:flex;
-    flex-wrap: wrap;
+body {
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap:1.5vmin;
+    min-height: 100vh;
+    background-color: #000;
 }
-.box{
-    height:18vmin;
-    width:18vmin;
-    border-radius:1rem;
-    border:none;
-    box-shadow: 0 0 1rem rgba(0 ,0, 0,0.3);
-    font-size:8vmin;
-    color:#b0413e;
 
+nav {
+    position: relative;
+    width: 524px;
+    height: 50px;
+    background-color: #222;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#reset-btn{
-padding:1rem;
-font-size:1.25rem;
-color:#ffffc7;
-background-color: #191913;
-border-radius:1rem;
-border:none;
-}
-#new-btn{
-    padding:1rem;
-    font-size:1.25rem;
-    color:#ffffc7;
-    background-color: #191913;
-    border-radius:1rem;
-    border:none;
-    }
-#msg{
-    color:#ffffc7;
-    font-size:5vmin;
-}
-#msg-container{
-    height:30vmin;
 
+nav a {
+    position: relative;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 23px;
+    z-index: 2;  /* Ensure the text stays above the span */
 }
-.hide{
-    display:none;
+
+nav span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 95px;
+    background: linear-gradient(45deg, #4f1919, #ff3333);
+    border-radius: 8px;
+    transition: 0.5s;
+    z-index: 1;  /* Ensure the span stays behind the text */
+}
+
+nav a:nth-child(1):hover ~ span {
+    left: 0px;
+    
+}
+
+nav a:nth-child(2):hover ~ span {
+    left: 95px;
+    
+}
+
+nav a:nth-child(3):hover ~ span {
+    left: 190px;
+    width: 110px;  
+}
+
+nav a:nth-child(4):hover ~ span {
+    left: 285px;
+    width: 115px;  
+}
+
+nav a:nth-child(5):hover ~ span {
+    left: 380px;
+    width: 143px;  
 }
