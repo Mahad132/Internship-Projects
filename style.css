@@ -1,73 +1,51 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
-
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #000;
+    background-color: #2F4F4F;
 }
-
-nav {
-    position: relative;
-    width: 524px;
-    height: 50px;
-    background-color: #222;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-nav a {
-    position: relative;
-    display: inline-block;
-    font-size: 1em;
-    font-weight: 500;
-    color: #fff;
-    text-decoration: none;
-    padding: 0 23px;
-    z-index: 2;  /* Ensure the text stays above the span */
-}
-
-nav span {
+.container {
+    background-color: #D3D3D3;
+    width: 40%;
+    min-width: 500px;
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 95px;
-    background: linear-gradient(45deg, #4f1919, #ff3333);
-    border-radius: 8px;
-    transition: 0.5s;
-    z-index: 1;  /* Ensure the span stays behind the text */
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 20px 0;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.338);
 }
-
-nav a:nth-child(1):hover ~ span {
-    left: 0px;
-    
+.time-display {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-family: 'Roboto mono', monospace;
 }
-
-nav a:nth-child(2):hover ~ span {
-    left: 95px;
-    
+.button {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
-
-nav a:nth-child(3):hover ~ span {
-    left: 190px;
-    width: 110px;  
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color:#000000;
 }
-
-nav a:nth-child(4):hover ~ span {
-    left: 285px;
-    width: 115px;  
+button:active {
+    transform: scale(0.98);
 }
-
-nav a:nth-child(5):hover ~ span {
-    left: 380px;
-    width: 143px;  
+.button button:hover{
+box-shadow: 0 0  20px rgba(0, 0, 0, 0.338);
+}
+h1{
+    color:#000000;
+    text-align: center;
+    margin-top: 10%;
 }
